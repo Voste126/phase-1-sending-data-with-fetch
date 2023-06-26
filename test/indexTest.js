@@ -1,6 +1,6 @@
 require( './setup' );
 const chai = require( 'chai' );
-const spies = require( 'chai-spies' );
+const spies = require( 'chai-spies' ); 
 const nock = require( 'nock' );
 chai.use( spies );
 
@@ -10,8 +10,6 @@ describe( "submitData()", () => {
   let xhr, requests
   beforeEach( function () {
     window.fetch = require( 'node-fetch' );
-
-
 
     chai.spy.on( window, 'fetch' );
     window.onerror = undefined;
